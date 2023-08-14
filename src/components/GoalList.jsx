@@ -12,7 +12,7 @@ export default function GoalList({
 }) {
   return (
     <div className="goal-container overflow-y-auto">
-      <h1 className="font-subtitle">Goal List</h1>
+      {/* <h1 className="font-subtitle">Goal List</h1> */}
       {goalList.length > 1 && (
         <ul>
           {goalList.map((goal) => (

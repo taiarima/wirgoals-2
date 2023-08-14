@@ -5,6 +5,7 @@ import GoalInfoBar from "./components/GoalInfoBar";
 import GoalList from "./components/GoalList";
 import TotalGoalSummary from "./components/TotalGoalSummary";
 import SingleGoalSummary from "./components/SingleGoalSummary";
+import TotalGoalInfoBar from "./components/TotalGoalInfoBar";
 
 function App() {
   const goalObjects = [
@@ -110,6 +111,7 @@ function App() {
           <GoalList goalList={goalObjects} />
         </Pane>
         <Pane>
+          <TotalGoalInfoBar />
           <TotalGoalSummary />
           <SingleGoalSummary />
         </Pane>
