@@ -6,6 +6,7 @@ import GoalList from "./components/GoalList";
 import TotalGoalSummary from "./components/TotalGoalSummary";
 import SingleGoalSummary from "./components/SingleGoalSummary";
 import TotalGoalInfoBar from "./components/TotalGoalInfoBar";
+import Body from "./components/Body";
 
 function App() {
   const goalObjects = [
@@ -103,9 +104,9 @@ function App() {
   ];
 
   return (
-    <div>
+    <>
       <NavBar />
-      <div className="flex flex-row ml-20 mr-20">
+      <Body>
         <Pane>
           <GoalInfoBar />
           <GoalList goalList={goalObjects} />
@@ -115,8 +116,8 @@ function App() {
           <TotalGoalSummary />
           <SingleGoalSummary />
         </Pane>
-      </div>
-    </div>
+      </Body>
+    </>
   );
 }
 

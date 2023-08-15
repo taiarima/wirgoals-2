@@ -35,7 +35,7 @@ export default function GoalList({
           ))}
         </ul>
       )}
-      <Button
+      {/* <Button
         onClick={() => {
           onSetShowAddGoal((prevShowAddGoal) => {
             if (showLogActivity) {
@@ -46,7 +46,7 @@ export default function GoalList({
         }}
       >
         Add New Goal
-      </Button>
+      </Button> */}
     </div>
   );
 }
