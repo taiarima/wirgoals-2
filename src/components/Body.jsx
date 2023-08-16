@@ -1,3 +1,5 @@
 export default function Body({ children }) {
-  return <div className="flex flex-row ml-20 mr-20">{children}</div>;
+  return (
+    <div className="flex large:flex-row large:ml-20 large:mr-20 flex-col">{children}</div>
+  );
 }
