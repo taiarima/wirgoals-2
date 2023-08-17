@@ -103,18 +103,39 @@ function App() {
     },
   ];
 
+  const [selectedGoal, setSelectedGoal] = useState(goalObjects.at(0));
+
+  const [goalsDisplayingDetails, setGoalsDisplayingDetails] = useState([]);
+
+  function handleGoalsDisplayingDetails(goal) {
+    setGoalsDisplayingDetails((prevGoals) => {
+      if (prevGoals.includes(goal.id)) {
+        return prevGoals.filter((g) => g !== goal.id);
+      } else {
+        return [...prevGoals, goal.id];
+      }
+    });
+  }
+
   return (
     <>
       <NavBar />
       <Body>
         <Pane>
           <GoalInfoBar />
-          <GoalList goalList={goalObjects} />
+          <GoalList
+            goalList={goalObjects}
+            handleGoalsDisplayingDetails={handleGoalsDisplayingDetails}
+            goalsDisplayingDetails={goalsDisplayingDetails}
+          />
         </Pane>
         <Pane>
           <TotalGoalInfoBar />
-          <TotalGoalSummary />
-          <SingleGoalSummary />
+          {/* <TotalGoalSummary /> */}
+          {goalsDisplayingDetails.length > 0 &&
+            goalObjects
+              .filter((goal) => goalsDisplayingDetails.includes(goal.id))
+              .map((goal) => <SingleGoalSummary key={goal.id} goal={goal} />)}
         </Pane>
       </Body>
     </>

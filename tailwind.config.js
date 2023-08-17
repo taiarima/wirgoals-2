@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         gold: "rgb(252, 252, 72)",
+        lightYellow: "#f7f7a8",
       },
       fontFamily: {
         title: ["Luckiest Guy", "cursive"],

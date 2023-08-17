@@ -3,6 +3,8 @@ import Goal from "./Goal";
 
 export default function GoalList({
   goalList,
+  handleGoalsDisplayingDetails,
+  goalsDisplayingDetails
   //   selectedGoal,
   //   handleSelectedGoal,
   //   onSetShowAddGoal,
@@ -29,6 +31,8 @@ export default function GoalList({
             <Goal
               goal={goal}
               key={goal.id}
+              handleGoalsDisplayingDetails={handleGoalsDisplayingDetails}
+              goalsDisplayingDetails={goalsDisplayingDetails}
               //   selectedGoal={selectedGoal}
               //   handleSelectedGoal={handleSelectedGoal}
             />
